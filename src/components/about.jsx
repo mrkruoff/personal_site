@@ -35,6 +35,17 @@ const About = () => {
             LinkedIn
           </a>
         </p>
+        <p>
+          This site was built with React and TailwindCSS. The source code can be
+          found on my on my{" "}
+          <a
+            className="underline"
+            href="https://github.com/mrkruoff/personal_site"
+          >
+            Github
+          </a>{" "}
+          page.
+        </p>
       </div>
     </div>
   );
