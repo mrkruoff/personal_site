@@ -1,5 +1,5 @@
 function Navigation({ setPage }) {
-  const classes = "cursor-pointer m-4";
+  const classes = "cursor-pointer";
 
   const handleClick = (e) => {
     setPage(e.target.innerHTML.toLowerCase());

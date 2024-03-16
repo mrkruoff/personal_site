@@ -3,7 +3,7 @@ import git from "../icons/github-mark.png";
 
 function Connenctions() {
   return (
-    <span class="flex flex-row">
+    <span class="flex flex-row space-x-4">
       <a href="https://www.linkedin.com/in/mark-ruoff-63624044/">
         <img
           src={li}
