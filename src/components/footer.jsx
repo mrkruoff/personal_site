@@ -2,7 +2,7 @@ import Connenctions from "./connenctions";
 
 function Footer() {
   return (
-    <footer class="sticky z-50 bg-gray-300 bottom-0 p-4">
+    <footer class="absolute inset-x-0 bottom-0 bg-gray-300 p-4">
       {" "}
       <Connenctions />
     </footer>
