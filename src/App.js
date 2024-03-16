@@ -7,7 +7,7 @@ import Navigation from "./components/navigation";
 const App = () => {
   const [page, setPage] = useState("about");
   return (
-    <div className="h-screen  bg-indigo-400 ">
+    <div className="h-screen bg-indigo-400 ">
       <Navigation setPage={setPage} />
       <Body page={page} />
       <Footer />
