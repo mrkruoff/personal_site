@@ -17,6 +17,8 @@ const About = () => {
           Bachelor's in Computer Science from Oregon State University. Have been
           working professionally as a software developer since. I have worked in
           the telecomunication, e-commerce, ad-tech, and travel industries.
+          Giving me an ever increasing breadth of knowledge which I bring to my
+          roles.
         </p>
         <p>
           I have experience with a variety of technologies including: Python,
