@@ -1,5 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-# personal_site
+# Personal Site
 
 Personal site for portfolio
+
+Deploying using Netlify

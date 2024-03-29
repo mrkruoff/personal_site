@@ -1,7 +1,7 @@
 function Contact() {
   return (
-    <>
-      <form class="flex flex-col space-y-4">
+    <div className="flex justify-center">
+      <form className="flex flex-col space-y-4">
         <label>
           Name:
           <input type="text" name="name" />
@@ -16,7 +16,7 @@ function Contact() {
         </label>
         <button type="submit">Click to submit</button>
       </form>
-    </>
+    </div>
   );
 }
 export default Contact;
