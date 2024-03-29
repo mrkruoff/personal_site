@@ -11,7 +11,7 @@ function Contact() {
           <input type="text" name="email" />
         </label>
         <label>
-          Message:
+          Message: <br />
           <textarea id="freeform" name="freeform" rows="4" cols="50" />
         </label>
         <button type="submit">Click to submit</button>
