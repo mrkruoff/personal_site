@@ -2,15 +2,15 @@ import me from "../icons/temporaryMe.jpg";
 
 const About = () => {
   return (
-    <div className="flex flex-row justify-between space-x-4">
+    <div className="">
       <img
         src={me}
         alt="Mark Ruoff"
-        class="object-scale-down"
-        width="400"
-        height="400"
+        class="object-scale-down float-right"
+        width="300"
+        height="300"
       />
-      <div className="text-pretty space-y-2">
+      <div className="space-y-8 text-xl text-pretty">
         <p>
           Hi my name is <strong>Mark Ruoff</strong> and I am a software
           developer with full-stack experience. Graduated in 2018 with a
