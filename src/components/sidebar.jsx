@@ -33,9 +33,6 @@ const Sidebar = ({ setPage }) => {
         <span className={classes} onClick={handleClick}>
           Experience
         </span>
-        <span className={classes} onClick={handleClick}>
-          Contact
-        </span>
       </nav>
     </div>
   );

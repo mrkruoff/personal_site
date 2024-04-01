@@ -26,8 +26,11 @@ const About = () => {
           Platform, and more.
         </p>
         <p>
-          If you would like to contact me please use the contact form or reach
-          out to me on{" "}
+          If you would like to contact me please feel free to{" "}
+          <a className="underline" href="mailto:ruoff.mark@gmail.com">
+            email
+          </a>{" "}
+          me or reach out to me on{" "}
           <a
             className="underline"
             href="https://www.linkedin.com/in/mark-ruoff-63624044/"
