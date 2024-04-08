@@ -4,4 +4,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Personal site for portfolio
 
-Deploying using Netlify
+Built with Create React App and Tailwind CSS. Deployed using Netlify.
