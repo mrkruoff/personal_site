@@ -8,7 +8,7 @@ const Sidebar = ({ setPage }) => {
   };
 
   return (
-    <div className="bg-gray-800 text-white w-64 h-full flex flex-col w-1/6">
+    <div className="bg-gray-900 text-white w-64 h-full flex flex-col w-1/6">
       <div className="flex items-center space-x-2 px-4 py-3">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -24,7 +24,7 @@ const Sidebar = ({ setPage }) => {
             d="M4 6h16M4 12h16m-7 6h7"
           />
         </svg>
-        <span className="text-1xl font-extrabold">Mark Ruoff</span>
+        <span className="text-2xl font-extrabold">Mark Ruoff</span>
       </div>
       <nav className="flex-1">
         <span className={classes} onClick={handleClick}>

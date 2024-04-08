@@ -2,10 +2,13 @@ import ExperienceCard from "./experienceCard";
 
 const workExperience = () => {
   return (
-    <div className="space-y-2">
+    <div className="flex flex-col space-y-2">
+      <h1 className="text-3xl">
+        <strong>Work Experience</strong>
+      </h1>
       <ExperienceCard
         company="Point.me"
-        position="Software Engineer"
+        position="Full Stack Software Engineer"
         duration="September 2023 - Present"
         location="Remote"
       />
@@ -18,13 +21,13 @@ const workExperience = () => {
       <ExperienceCard
         company="Opanga Networks"
         position="Software Engineer II"
-        duration="September 2018 - September 2021"
+        duration="September 2018 - October 2021"
         location="Seattle, WA"
       />
       <ExperienceCard
         company="Forms on Fire"
         position="Application Developer"
-        duration="January 2018 - August 2029"
+        duration="January 2018 - August 2018"
         location="Seattle, WA"
       />
     </div>

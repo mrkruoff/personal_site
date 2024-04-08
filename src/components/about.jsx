@@ -10,20 +10,21 @@ const About = () => {
         width="300"
         height="300"
       />
-      <div className="space-y-8 text-xl text-pretty">
+      <div className="space-y-16 text-3xl text-pretty">
         <p>
           Hi my name is <strong>Mark Ruoff</strong> and I am a software
           developer with full-stack experience. Graduated in 2018 with a
-          Bachelor's in Computer Science from Oregon State University. Have been
-          working professionally as a software developer since. I have worked in
-          the telecomunication, e-commerce, ad-tech, and travel industries.
-          Giving me an ever increasing breadth of knowledge which I bring to my
-          roles.
+          Bachelor's in Computer Science from Oregon State University and have
+          been working professionally as a software developer since. I have
+          first hand experience in the telecomunication, e-commerce, ad-tech,
+          and travel industries. Giving me an ever increasing breadth of
+          knowledge which I bring to my roles.
         </p>
         <p>
           I have experience with a variety of technologies including: Python,
           React, Angular, Node.js, PostgreSQL, MongoDb, AWS, Google Cloud
-          Platform, and more.
+          Platform, and more. Never afraid to pick up and learn the right
+          technology for the right project.
         </p>
         <p>
           If you would like to contact me please feel free to{" "}

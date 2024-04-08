@@ -17,27 +17,13 @@ function Experience() {
             LinkedIn
           </a>
         </strong>
-        <div className="flex justify-center mt-4">
-          <button
-            className={`mr-2 ${
-              subsection === "work" ? "text-black" : "text-gray-500"
-            }`}
-            onClick={() => setSubsection("work")}
-          >
-            Work
-          </button>
-          <button
-            className={`ml-2 ${
-              subsection === "education" ? "text-black" : "text-gray-500"
-            }`}
-            onClick={() => setSubsection("education")}
-          >
-            Education
-          </button>
-        </div>
-        <div className="flex  justify-center mt-4">
-          {subsection === "work" && <WorkExperience />}
-          {subsection === "education" && <Education />}
+        <div className="flex flex-row mt-4 m-4">
+          <div className="w-1/2 ml-16">
+            <WorkExperience />
+          </div>
+          <div className="w-1/2 ">
+            <Education />
+          </div>
         </div>
       </div>
     </>

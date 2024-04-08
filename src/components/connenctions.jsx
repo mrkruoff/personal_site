@@ -1,5 +1,5 @@
 import li from "../icons/LI-In-Bug.png";
-import git from "../icons/github-mark.png";
+import git from "../icons/github-mark-white.png";
 
 function Connenctions() {
   return (

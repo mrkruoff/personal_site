@@ -7,7 +7,7 @@ import Sidebar from "./components/sidebar";
 const App = () => {
   const [page, setPage] = useState("about");
   return (
-    <div className="flex h-screen bg-indigo-400 ">
+    <div className="flex h-screen bg-black">
       <Sidebar setPage={setPage} />
       <Body page={page} />
       <Footer />
