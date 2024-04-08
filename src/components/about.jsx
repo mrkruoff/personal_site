@@ -12,19 +12,19 @@ const About = () => {
       />
       <div className="space-y-16 text-3xl text-pretty">
         <p>
-          Hi my name is <strong>Mark Ruoff</strong> and I am a software
-          developer with full-stack experience. Graduated in 2018 with a
-          Bachelor's in Computer Science from Oregon State University and have
-          been working professionally as a software developer since. I have
-          first hand experience in the telecomunication, e-commerce, ad-tech,
-          and travel industries. Giving me an ever increasing breadth of
-          knowledge which I bring to my roles.
+          Hi my name is <strong>Mark Ruoff</strong> a seasoned software
+          developer with extensive full-stack expertise. Graduating in 2018 with
+          a Bachelor's in Computer Science from Oregon State University, I've
+          since been immersed in professional software development roles. Over
+          the years, I've garnered firsthand experience in diverse industries
+          such as telecommunications, e-commerce, ad-tech, and travel, enriching
+          my knowledge base with each project.
         </p>
         <p>
-          I have experience with a variety of technologies including: Python,
-          React, Angular, Node.js, PostgreSQL, MongoDb, AWS, Google Cloud
-          Platform, and more. Never afraid to pick up and learn the right
-          technology for the right project.
+          My proficiency spans across a range of technologies, including but not
+          limited to Python, React, Angular, Node.js, PostgreSQL, MongoDB, AWS,
+          and Google Cloud Platform. I embrace the challenge of mastering new
+          technologies to suit project requirements.
         </p>
         <p>
           If you would like to contact me please feel free to{" "}
@@ -40,8 +40,8 @@ const About = () => {
           </a>
         </p>
         <p>
-          This site was built with React and TailwindCSS. The source code can be
-          found on my on my{" "}
+          This site was built with React and Tailwind CSS. The source code can
+          be found on my on my{" "}
           <a
             className="underline"
             href="https://github.com/mrkruoff/personal_site"
