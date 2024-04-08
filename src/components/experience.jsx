@@ -1,10 +1,7 @@
-import { useState } from "react";
 import WorkExperience from "./workExperience";
 import Education from "./education";
 
 function Experience() {
-  const [subsection, setSubsection] = useState("work");
-
   return (
     <>
       <div className="flex flex-col shrink-0">
