@@ -1,7 +1,7 @@
 import React from "react";
 
 const Sidebar = ({ setPage }) => {
-  const classes = "block py-2 px-4 text-sm hover:bg-gray-700 cursor-pointer";
+  const classes = "block py-2 px-4 text-xl hover:bg-gray-700 cursor-pointer";
 
   const handleClick = (e) => {
     setPage(e.target.innerHTML.toLowerCase());

@@ -8,7 +8,7 @@ function Experience() {
   return (
     <>
       <div className="flex flex-col shrink-0">
-        <strong className="flex justify-center">
+        <strong className="flex justify-center mr-32">
           For specific details please check out my&nbsp;
           <a
             className="underline"

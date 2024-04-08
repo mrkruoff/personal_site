@@ -1,4 +1,4 @@
-import me from "../icons/temporaryMe.jpg";
+import me from "../icons/me.jpg";
 
 const About = () => {
   return (
