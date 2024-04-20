@@ -2,15 +2,13 @@ import me from "../icons/me.jpg";
 
 const About = () => {
   return (
-    <div className="">
+    <div data-testid="about-component" className="h-max mb-8">
       <img
         src={me}
         alt="Mark Ruoff"
-        class="object-scale-down float-right"
-        width="300"
-        height="300"
+        className="object-scale-down float-right h-20 w-20 md:h-56 md:w-56"
       />
-      <div className="space-y-16 text-3xl text-pretty">
+      <div className=" space-y-4 md:space-y-8 text-s md:text-xl text-pretty">
         <p>
           Hi my name is <strong>Mark Ruoff</strong> a seasoned software
           developer with extensive full-stack expertise. Graduating in 2018 with

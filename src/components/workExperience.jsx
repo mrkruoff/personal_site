@@ -2,8 +2,8 @@ import ExperienceCard from "./experienceCard";
 
 const workExperience = () => {
   return (
-    <div className="flex flex-col space-y-2">
-      <h1 className="text-3xl">
+    <div className="flex flex-col space-y-8">
+      <h1 className="text-xl md:text-2xl">
         <strong>Work Experience</strong>
       </h1>
       <ExperienceCard

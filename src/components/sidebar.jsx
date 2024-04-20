@@ -8,7 +8,10 @@ const Sidebar = ({ setPage }) => {
   };
 
   return (
-    <div className="bg-gray-900 text-white w-64 h-full flex flex-col w-1/6">
+    <div
+      data-testid="sidebar"
+      className="bg-gray-900 text-white w-64 h-auto flex flex-col w-1/6"
+    >
       <div className="flex items-center space-x-2 px-4 py-3">
         <svg
           xmlns="http://www.w3.org/2000/svg"
