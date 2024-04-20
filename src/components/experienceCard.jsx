@@ -1,6 +1,6 @@
 const ExperienceCard = ({ company, position, duration, location }) => {
   return (
-    <div className="md:text-2xl">
+    <div className="md:text-xl">
       <h3>
         <strong>{company}</strong>
       </h3>

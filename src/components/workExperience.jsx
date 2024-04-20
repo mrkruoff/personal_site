@@ -3,7 +3,7 @@ import ExperienceCard from "./experienceCard";
 const workExperience = () => {
   return (
     <div className="flex flex-col space-y-2">
-      <h1 className="text-3xl">
+      <h1 className="md:text-2xl">
         <strong>Work Experience</strong>
       </h1>
       <ExperienceCard

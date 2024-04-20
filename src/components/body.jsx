@@ -4,7 +4,7 @@ import Footer from "./footer";
 
 function Body({ page }) {
   return (
-    <div className="p-4 md:h-full text-white w-5/6">
+    <div data-testid="body" className="p-4 md:h-full text-white w-5/6">
       {page === "about" && <About />}
       {page === "experience" && <Experience />}
       <Footer />
