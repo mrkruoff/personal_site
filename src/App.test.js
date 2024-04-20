@@ -18,3 +18,8 @@ test('initial page state is set to "about"', () => {
   const pageElement = screen.getByTestId("page");
   expect(pageElement.textContent).toContain("Mark Ruoff");
 });
+
+test("renders Footer component", () => {
+  render(<App />);
+  expect(screen.getByTestId("footer-component")).toBeInTheDocument();
+});

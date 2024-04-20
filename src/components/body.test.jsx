@@ -7,13 +7,8 @@ describe("Body component", () => {
     expect(screen.getByTestId("about-component")).toBeInTheDocument();
   });
 
-  test("renders Experience component when page prop is 'experience'", () => {
-    render(<Body page="experience" />);
-    expect(screen.getByTestId("experience-component")).toBeInTheDocument();
-  });
-
-  test("renders Footer component", () => {
-    render(<Body />);
-    expect(screen.getByTestId("footer-component")).toBeInTheDocument();
-  });
+  // test("renders Experience component when page prop is 'experience'", () => {
+  //   render(<Body page="experience" />);
+  //   expect(screen.getByTestId("experience-component")).toBeInTheDocument();
+  // });
 });

@@ -6,7 +6,7 @@ function Footer() {
   return (
     <footer
       data-testid="footer-component"
-      className="absolute flex flex-row justify-between inset-x-0 bottom-0 bg-emerald-950  md:p-4"
+      className="absolute flex flex-row justify-between  sticky inset-x-0  bottom-0 bg-emerald-950  p-2 md:p-4"
     >
       {" "}
       <Connenctions />
