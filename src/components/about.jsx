@@ -2,7 +2,7 @@ import me from "../icons/me.jpg";
 
 const About = () => {
   return (
-    <div className="">
+    <div>
       <img
         src={me}
         alt="Mark Ruoff"
@@ -10,7 +10,7 @@ const About = () => {
         width="300"
         height="300"
       />
-      <div className="space-y-16 text-3xl text-pretty">
+      <div className="space-y-16 md:text-3xl text-pretty">
         <p>
           Hi my name is <strong>Mark Ruoff</strong> a seasoned software
           developer with extensive full-stack expertise. Graduating in 2018 with
