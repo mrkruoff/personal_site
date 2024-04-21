@@ -5,7 +5,7 @@ import Sidebar from "./components/sidebar";
 import Footer from "./components/footer";
 
 const App = () => {
-  const [page, setPage] = useState("about");
+  const [page, setPage] = useState("About");
   return (
     <>
       <div data-testid="page" className="flex md:h-screen bg-black">
