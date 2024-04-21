@@ -10,11 +10,11 @@ const About = () => {
       />
       <div className=" space-y-4 md:space-y-8 text-s md:text-xl text-pretty">
         <p>
-          Greetings! I'm <strong>Mark Ruoff</strong> a seasoned software
-          developer with a strong background in full-stack development. Since
-          earning my Bachelor's degree in Computer Science from Oregon State
-          University, I've been engaged in various professional software
-          development positions
+          Greetings! I'm <strong>Mark Ruoff</strong> a software developer with a
+          strong background in full-stack development. Since earning my
+          Bachelor's degree in Computer Science from Oregon State University,
+          I've been engaged in various professional software development
+          positions
         </p>
         <p>
           Throughout my career, I've accumulated extensive experience across
