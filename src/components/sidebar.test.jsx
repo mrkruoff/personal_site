@@ -31,13 +31,13 @@ describe("Sidebar component", () => {
     fireEvent.click(aboutLink);
 
     // Check if the setPage function is called with the correct value
-    expect(setPageMock).toHaveBeenCalledWith("about");
+    expect(setPageMock).toHaveBeenCalledWith("About");
 
     // Simulate a click on the Experience link
     const experienceLink = screen.getByText("Experience");
     fireEvent.click(experienceLink);
 
     // Check if the setPage function is called with the correct value
-    expect(setPageMock).toHaveBeenCalledWith("experience");
+    expect(setPageMock).toHaveBeenCalledWith("Experience");
   });
 });

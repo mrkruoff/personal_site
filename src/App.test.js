@@ -11,7 +11,7 @@ test("renders App component", () => {
   expect(bodyElement).toBeInTheDocument();
 });
 
-test('initial page state is set to "about"', () => {
+test('initial page state is set to "About"', () => {
   render(<App />);
 
   // Assert that the initial page state is set to "about"
