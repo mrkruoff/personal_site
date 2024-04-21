@@ -10,23 +10,13 @@ const About = () => {
       />
       <div className=" space-y-4 md:space-y-8 text-s md:text-xl text-pretty">
         <p>
-          Greetings! I'm <strong>Mark Ruoff</strong> a software developer with a
-          strong background in full-stack development. Since earning my
-          Bachelor's degree in Computer Science from Oregon State University,
-          I've been engaged in various professional software development
-          positions
-        </p>
-        <p>
-          Throughout my career, I've accumulated extensive experience across
-          multiple industries including telecommunications, e-commerce, ad-tech,
-          and travel. Each project has contributed to my ever-growing knowledge
-          base and honed my skills.
-        </p>
-        <p>
-          My expertise covers a wide array of technologies, including Python,
-          React, Angular, Next.js, Node.js, PostgreSQL, MongoDB, AWS, and Google
-          Cloud Platform. I'm always eager to embrace new technologies, adapting
-          them to meet project needs.
+          Greetings! I'm <strong>Mark Ruoff</strong> a software developer with
+          experience in full-stack development. I hold a Bachelor's Degree in
+          Computer Science from Oregon State University and have been actively
+          working in the field ever since. My skill set encompasses a diverse
+          range of technologies, including Python, React, Angular, Next.js,
+          Node.js, Java, Spring Boot, PostgreSQL, MongoDB, AWS, and Google Cloud
+          Platform.
         </p>
         <p>
           Feel free to reach out via{" "}
