@@ -10,26 +10,30 @@ const About = () => {
       />
       <div className=" space-y-4 md:space-y-8 text-s md:text-xl text-pretty">
         <p>
-          Hi my name is <strong>Mark Ruoff</strong> a seasoned software
-          developer with extensive full-stack expertise. Graduating in 2018 with
-          a Bachelor's in Computer Science from Oregon State University, I've
-          since been immersed in professional software development roles. Over
-          the years, I've garnered firsthand experience in diverse industries
-          such as telecommunications, e-commerce, ad-tech, and travel, enriching
-          my knowledge base with each project.
+          Greetings! I'm <strong>Mark Ruoff</strong> a seasoned software
+          developer with a strong background in full-stack development. Since
+          earning my Bachelor's degree in Computer Science from Oregon State
+          University, I've been engaged in various professional software
+          development positions
         </p>
         <p>
-          My proficiency spans across a range of technologies, including but not
-          limited to Python, React, Angular, Node.js, PostgreSQL, MongoDB, AWS,
-          and Google Cloud Platform. I embrace the challenge of mastering new
-          technologies to suit project requirements.
+          Throughout my career, I've accumulated extensive experience across
+          multiple industries including telecommunications, e-commerce, ad-tech,
+          and travel. Each project has contributed to my ever-growing knowledge
+          base and honed my skills.
         </p>
         <p>
-          If you would like to contact me please feel free to{" "}
+          My expertise covers a wide array of technologies, including Python,
+          React, Angular, Next.js, Node.js, PostgreSQL, MongoDB, AWS, and Google
+          Cloud Platform. I'm always eager to embrace new technologies, adapting
+          them to meet project needs.
+        </p>
+        <p>
+          Feel free to reach out via{" "}
           <a className="underline" href="mailto:ruoff.mark@gmail.com">
             email
           </a>{" "}
-          me or reach out to me on{" "}
+          me or connect with me on{" "}
           <a
             className="underline"
             href="https://www.linkedin.com/in/mark-ruoff-63624044/"
