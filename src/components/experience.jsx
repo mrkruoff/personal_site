@@ -3,7 +3,7 @@ import Education from "./education";
 
 function Experience() {
   return (
-    <div datatest-id="experience-component" className="flex justify-center">
+    <div data-testid="experience-component" className="flex justify-center">
       <div className="flex flex-col space-y-20 mt-4 m-4 ">
         <div className="w-full">
           <WorkExperience />

@@ -1,12 +1,14 @@
 const ExperienceCard = ({ company, position, duration, location }) => {
   return (
-    <div className="text-l md:text-xl">
+    <div data-testid="experience-card" className="text-l md:text-xl">
       <h3>
-        <strong>{company}</strong>
+        <strong data-testid="company-name">{company}</strong>
       </h3>
-      <p className="italic">{position}</p>
-      <p>{duration}</p>
-      <p>{location}</p>
+      <p data-testid="position" className="italic">
+        {position}
+      </p>
+      <p data-testid="duration">{duration}</p>
+      <p data-testid="location">{location}</p>
     </div>
   );
 };

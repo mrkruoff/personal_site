@@ -1,6 +1,6 @@
 const Education = () => {
   return (
-    <div className="space-y-2">
+    <div data-testid="education-component" className="space-y-2">
       <h1 className=" text-xl md:text-2xl">
         <strong>Education</strong>
       </h1>

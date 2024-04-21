@@ -2,7 +2,10 @@ import ExperienceCard from "./experienceCard";
 
 const workExperience = () => {
   return (
-    <div className="flex flex-col space-y-8">
+    <div
+      data-testid="work-experience-component"
+      className="flex flex-col space-y-8"
+    >
       <h1 className="text-xl md:text-2xl">
         <strong>Work Experience</strong>
       </h1>
