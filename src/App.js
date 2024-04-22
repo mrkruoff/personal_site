@@ -8,7 +8,7 @@ const App = () => {
   const [page, setPage] = useState("About");
   return (
     <>
-      <div data-testid="page" className="flex md:h-screen bg-black">
+      <div data-testid="page" className="flex  bg-black">
         <Sidebar setPage={setPage} />
         <Body page={page} />
       </div>
