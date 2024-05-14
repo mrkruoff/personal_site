@@ -2,7 +2,7 @@ import me from "../icons/me.jpg";
 
 const About = () => {
   return (
-    <div data-testid="about-component" className="h-screen mb-8">
+    <div data-testid="about-component" className="h-max mb-8">
       <img
         src={me}
         alt="Mark Ruoff"
