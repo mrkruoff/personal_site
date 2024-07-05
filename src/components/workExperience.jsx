@@ -11,8 +11,14 @@ const workExperience = () => {
       </h1>
       <ExperienceCard
         company="Point.me"
+        position="Senior Software Engineer"
+        duration="July 2024 - Present"
+        location="Remote"
+      />
+      <ExperienceCard
+        company="Point.me"
         position="Full Stack Software Engineer"
-        duration="September 2023 - Present"
+        duration="September 2023 - July 2024"
         location="Remote"
       />
       <ExperienceCard
