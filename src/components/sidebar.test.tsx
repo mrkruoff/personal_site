@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from "@testing-library/react";
-import Sidebar from "./sidebar";
+import Sidebar from "./sidebar.js";
 
 describe("Sidebar component", () => {
   test("renders sidebar with correct content", () => {
