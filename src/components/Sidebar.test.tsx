@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, it, expect, vi } from "vitest";
-import Sidebar from "./sidebar.js";
+import Sidebar from "./Sidebar.tsx";
 
 describe("Sidebar component", () => {
   it("renders sidebar with correct content", () => {

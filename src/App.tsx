@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
-import Sidebar from "./components/sidebar.tsx";
+import Sidebar from "./components/Sidebar";
+import Footer from "./components/Footer";
 
 const App = () => {
   const [page, setPage] = useState("About");
@@ -11,7 +12,7 @@ const App = () => {
         {/*<Body page={page} />*/}
         Test info
       </div>
-      {/*<Footer />*/}
+      <Footer />
     </>
   );
 };

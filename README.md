@@ -1,3 +1,11 @@
+# Personal Site
+
+Personal site for portfolio
+
+Now upgraded to use vite and typescript instead of CRA. Deployed using Netlify.
+
+
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
