@@ -1,8 +1,9 @@
 import { render, screen, fireEvent } from "@testing-library/react";
-import Sidebar from "./sidebar";
+import { describe, it, expect, vi } from "vitest";
+import Sidebar from "./Sidebar";
 
 describe("Sidebar component", () => {
-  test("renders sidebar with correct content", () => {
+  it("renders sidebar with correct content", () => {
     render(<Sidebar />);
 
     // Check if the sidebar is rendered
@@ -22,8 +23,8 @@ describe("Sidebar component", () => {
     expect(experienceLink).toBeInTheDocument();
   });
 
-  test("calls setPage function with correct value when link is clicked", () => {
-    const setPageMock = jest.fn();
+  it("calls setPage function with correct value when link is clicked", () => {
+    const setPageMock = vi.fn();
     render(<Sidebar setPage={setPageMock} />);
 
     // Simulate a click on the About link

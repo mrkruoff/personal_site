@@ -1,14 +1,15 @@
 import { render, screen } from "@testing-library/react";
-import Footer from "./footer";
+import { describe, it, expect } from "vitest";
+import Footer from "./Footer";
 
 describe("Footer component", () => {
-  test("renders the Connections component", () => {
+  it("renders the Connections component", () => {
     render(<Footer />);
     const connectionsComponent = screen.getByTestId("connections-component");
     expect(connectionsComponent).toBeInTheDocument();
   });
 
-  test("displays the current year", () => {
+  it("displays the current year", () => {
     render(<Footer />);
     const currentYear = new Date().getFullYear();
     const yearElement = screen.getByText(`Mark Ruoff © ${currentYear}`);

@@ -1,4 +1,4 @@
-import me from "../icons/me.jpg";
+import me from "../assets/me.jpg";
 
 const About = () => {
   return (
@@ -23,7 +23,7 @@ const About = () => {
           <a className="underline" href="mailto:ruoff.mark@gmail.com">
             email
           </a>{" "}
-          me or connect with me on{" "}
+          or connect with me on{" "}
           <a
             className="underline"
             href="https://www.linkedin.com/in/mark-ruoff-63624044/"
@@ -32,8 +32,8 @@ const About = () => {
           </a>
         </p>
         <p>
-          This site was built with React and Tailwind CSS. The source code can
-          be found on my on my{" "}
+          This site was built with React, Vite, and Tailwind CSS. The source
+          code can be found on my on my{" "}
           <a
             className="underline"
             href="https://github.com/mrkruoff/personal_site"

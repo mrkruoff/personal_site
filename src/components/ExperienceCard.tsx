@@ -1,4 +1,16 @@
-const ExperienceCard = ({ company, position, duration, location }) => {
+interface ExperienceCardProps {
+  company: string;
+  position: string;
+  duration: string;
+  location: string;
+}
+
+const ExperienceCard: React.FC<ExperienceCardProps> = ({
+  company,
+  position,
+  duration,
+  location,
+}) => {
   return (
     <div data-testid="experience-card" className="text-l md:text-xl">
       <h3>

@@ -1,30 +1,31 @@
 import { render, screen } from "@testing-library/react";
-import Connenctions from "./connenctions";
+import { describe, it, expect } from "vitest";
+import Connections from "./Connections";
 
-describe("Connenctions component", () => {
-  test("renders LinkedIn link with correct href", () => {
-    render(<Connenctions />);
+describe("Connections component", () => {
+  it("renders LinkedIn link with correct href", () => {
+    render(<Connections />);
     const linkedInLink = screen.getByRole("link", { name: "LinkedIn" });
     expect(linkedInLink).toHaveAttribute(
       "href",
-      "https://www.linkedin.com/in/mark-ruoff-63624044/"
+      "https://www.linkedin.com/in/mark-ruoff-63624044/",
     );
   });
 
-  test("renders LinkedIn image with correct alt text", () => {
-    render(<Connenctions />);
+  it("renders LinkedIn image with correct alt text", () => {
+    render(<Connections />);
     const linkedInImage = screen.getByAltText("LinkedIn");
     expect(linkedInImage).toBeInTheDocument();
   });
 
-  test("renders GitHub link with correct href", () => {
-    render(<Connenctions />);
+  it("renders GitHub link with correct href", () => {
+    render(<Connections />);
     const gitHubLink = screen.getByRole("link", { name: "Github" });
     expect(gitHubLink).toHaveAttribute("href", "https://github.com/mrkruoff");
   });
 
-  test("renders GitHub image with correct alt text", () => {
-    render(<Connenctions />);
+  it("renders GitHub image with correct alt text", () => {
+    render(<Connections />);
     const gitHubImage = screen.getByAltText("Github");
     expect(gitHubImage).toBeInTheDocument();
   });
