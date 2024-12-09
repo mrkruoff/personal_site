@@ -17,8 +17,8 @@ const Sidebar: React.FC<SidebarProps> = ({ setPage }) => {
   };
 
   return (
-    <div data-testid="sidebar" className="flex h-auto bg-gray-900">
-      <nav className="text-white w-64 flex flex-col ">
+    <div data-testid="sidebar" className="flex h-auto  bg-gray-900">
+      <nav className="text-white flex flex-col ">
         <div className="p-4">
           <h2 className="text-2xl font-extrabold underline">Mark Ruoff</h2>
         </div>
