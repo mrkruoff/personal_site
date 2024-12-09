@@ -1,10 +1,11 @@
 import { render, screen } from "@testing-library/react";
-import WorkExperience from "./workExperience";
+import { describe, it, expect } from "vitest";
+import WorkExperience from "./WorkExperience";
 
 describe("WorkExperience component", () => {
-  test("renders the correct number of ExperienceCard components", () => {
+  it("renders the correct number of ExperienceCard components", () => {
     render(<WorkExperience />);
     const experienceCards = screen.getAllByTestId("experience-card");
-    expect(experienceCards.length).toBeGreaterThan(0);
+    expect(experienceCards.length).toEqual(5);
   });
 });

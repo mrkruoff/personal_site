@@ -1,4 +1,4 @@
-import me from "../icons/me.jpg";
+import me from "../assets/me.jpg";
 
 const About = () => {
   return (
@@ -32,8 +32,8 @@ const About = () => {
           </a>
         </p>
         <p>
-          This site was built with React and Tailwind CSS. The source code can
-          be found on my on my{" "}
+          This site was built with React, Vite, and Tailwind CSS. The source
+          code can be found on my on my{" "}
           <a
             className="underline"
             href="https://github.com/mrkruoff/personal_site"

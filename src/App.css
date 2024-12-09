@@ -2,11 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+  height: 100%; /* Ensure html and body span the full viewport */
+}
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  height: 100%; /* Ensure the root container spans the full height */
+  width: 100%; /* Make it span the full width */
+  background-color: black; /* Optional: Set a background color */
 }
 
 .logo {

@@ -1,11 +1,16 @@
-import Experience from "./experience";
-import About from "./about";
+// import Experience from "./Experience";
+import About from "./About";
+import Experience from "./Experience";
 
-function Body({ page }) {
+type BodyProps = {
+  page: string;
+};
+
+function Body({ page }: BodyProps) {
   const headerTitle = page === "About" ? "About Me" : "My Experience";
 
   return (
-    <div data-testid="body" className="p-4 md:h-full text-white w-5/6">
+    <div data-testid="body" className="p-4 text-white w-full flex-grow">
       <header data-testid="header" className="mb-4 bg-emerald-950">
         <h1 className="md:text-2xl">
           <strong>{headerTitle}</strong>

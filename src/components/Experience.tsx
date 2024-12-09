@@ -1,5 +1,5 @@
-import WorkExperience from "./workExperience";
-import Education from "./education";
+import Education from "./Education";
+import WorkExperience from "./WorkExperience";
 
 function Experience() {
   return (

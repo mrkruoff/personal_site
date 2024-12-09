@@ -1,6 +1,6 @@
-import ExperienceCard from "./experienceCard";
+import ExperienceCard from "./ExperienceCard";
 
-const workExperience = () => {
+const WorkExperience: React.FC = () => {
   return (
     <div
       data-testid="work-experience-component"
@@ -43,4 +43,4 @@ const workExperience = () => {
   );
 };
 
-export default workExperience;
+export default WorkExperience;
