@@ -23,7 +23,7 @@ const About = () => {
           <a className="underline" href="mailto:ruoff.mark@gmail.com">
             email
           </a>{" "}
-          me or connect with me on{" "}
+          or connect with me on{" "}
           <a
             className="underline"
             href="https://www.linkedin.com/in/mark-ruoff-63624044/"
