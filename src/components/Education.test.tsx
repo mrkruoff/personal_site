@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
-import Education from "./education";
+import Education from "./Education";
 
 describe("Education component", () => {
   it("renders the correct university name", () => {
