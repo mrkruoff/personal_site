@@ -33,8 +33,8 @@ const About = () => {
           </a>
         </p>
         <p>
-          This site was built with React, Vite, and Tailwind CSS. The source
-          code can be found on my on my{" "}
+          This site was built using React, Vite, and Tailwind CSS. The source
+          code can be found on my{" "}
           <a
             className="underline"
             href="https://github.com/mrkruoff/personal_site"
