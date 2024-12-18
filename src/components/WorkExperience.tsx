@@ -1,4 +1,5 @@
 import ExperienceCard from "./ExperienceCard";
+import React from "react";
 
 const WorkExperience: React.FC = () => {
   return (

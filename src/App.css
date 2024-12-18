@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 html, body {
-  height: 100%; /* Ensure html and body span the full viewport */
+  height: 100%;
 }
 
 #root {
-  height: 100%; /* Ensure the root container spans the full height */
-  width: 100%; /* Make it span the full width */
-  background-color: black; /* Optional: Set a background color */
+  height: 100%;
+  width: 100%;
+  background-color: black;
 }
 
 .logo {

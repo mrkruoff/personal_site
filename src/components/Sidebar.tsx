@@ -1,3 +1,5 @@
+import React from "react";
+
 type SidebarProps = {
   setPage: (page: string) => void;
 };

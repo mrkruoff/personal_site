@@ -1,4 +1,5 @@
 import Connections from "./Connections";
+import React from "react";
 
 const Footer: React.FC = () => {
   const year: number = new Date().getFullYear();

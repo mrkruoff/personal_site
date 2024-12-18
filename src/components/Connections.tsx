@@ -1,5 +1,6 @@
 import li from "../assets/LI-In-Bug.png";
 import git from "../assets/github-mark-white.png";
+import React from "react";
 
 const Connections: React.FC = () => {
   return (
