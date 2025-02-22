@@ -6,7 +6,7 @@ const About = () => {
       <img
         src={me}
         alt="Mark Ruoff"
-        className="object-scale-down float-right h-20 w-20 md:h-56 md:w-56"
+        className="object-scale-down float-right h-20 w-20 md:h-56 md:w-56 ml-4"
       />
       <div className=" space-y-4 md:space-y-8 text-s md:text-xl text-pretty">
         <p>
