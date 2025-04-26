@@ -2,20 +2,25 @@ import { render, screen } from "@testing-library/react";
 import { describe, it, expect, vi } from "vitest";
 import Body from "./Body";
 
+// Define a type for component props
+type ComponentProps = React.HTMLAttributes<HTMLElement> & {
+  children?: React.ReactNode;
+};
+
 // Mock Framer Motion
 vi.mock("framer-motion", () => ({
   motion: {
-    div: (props: any) => <div {...props} />,
-    h1: (props: any) => <h1 {...props} />,
-    h2: (props: any) => <h2 {...props} />,
-    h3: (props: any) => <h3 {...props} />,
-    p: (props: any) => <p {...props} />,
-    img: (props: any) => <img {...props} />,
-    a: (props: any) => <a {...props} />,
-    li: (props: any) => <li {...props} />,
-    footer: (props: any) => <footer {...props} />,
+    div: (props: ComponentProps) => <div {...props} />,
+    h1: (props: ComponentProps) => <h1 {...props} />,
+    h2: (props: ComponentProps) => <h2 {...props} />,
+    h3: (props: ComponentProps) => <h3 {...props} />,
+    p: (props: ComponentProps) => <p {...props} />,
+    img: (props: React.ImgHTMLAttributes<HTMLImageElement>) => <img {...props} />,
+    a: (props: React.AnchorHTMLAttributes<HTMLAnchorElement>) => <a {...props} />,
+    li: (props: ComponentProps) => <li {...props} />,
+    footer: (props: ComponentProps) => <footer {...props} />,
   },
-  AnimatePresence: ({ children }: any) => <>{children}</>,
+  AnimatePresence: ({ children }: { children: React.ReactNode }) => <>{children}</>,
 }));
 
 // Mock the IntersectionObserver hook

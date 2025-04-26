@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FaEnvelope, FaMapMarkerAlt, FaLinkedin, FaGithub } from "react-icons/fa";
 
+// Using Record<never, never> to satisfy ESLint's no-empty-object-type rule
 const Contact: React.FC = () => {
   const contactInfo = [
     {
@@ -57,7 +58,7 @@ const Contact: React.FC = () => {
             transition={{ delay: 0.1 * index, duration: 0.5 }}
             whileHover={{ y: -5, boxShadow: "0 10px 30px -10px rgba(2, 132, 199, 0.2)" }}
           >
-            <div className="flex items-center mb-3">ß
+            <div className="flex items-center mb-3">
               <div className="w-12 h-12 rounded-full bg-dark-700 flex items-center justify-center text-primary-400 mr-4">
                 {item.icon}
               </div>

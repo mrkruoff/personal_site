@@ -48,19 +48,24 @@ vi.mock("./Contact", () => ({
   default: () => <MockContact />
 }));
 
+// Define a type for component props
+type ComponentProps = React.HTMLAttributes<HTMLElement> & {
+  children?: React.ReactNode;
+};
+
 // Mock Framer Motion
 vi.mock("framer-motion", () => ({
   motion: {
-    div: ({ children, ...props }: any) => <div {...props}>{children}</div>,
-    h1: ({ children, ...props }: any) => <h1 {...props}>{children}</h1>,
-    h2: ({ children, ...props }: any) => <h2 {...props}>{children}</h2>,
-    h3: ({ children, ...props }: any) => <h3 {...props}>{children}</h3>,
-    p: ({ children, ...props }: any) => <p {...props}>{children}</p>,
-    img: ({ ...props }: any) => <img {...props} />,
-    a: ({ children, ...props }: any) => <a {...props}>{children}</a>,
-    li: ({ children, ...props }: any) => <li {...props}>{children}</li>,
+    div: ({ children, ...props }: ComponentProps) => <div {...props}>{children}</div>,
+    h1: ({ children, ...props }: ComponentProps) => <h1 {...props}>{children}</h1>,
+    h2: ({ children, ...props }: ComponentProps) => <h2 {...props}>{children}</h2>,
+    h3: ({ children, ...props }: ComponentProps) => <h3 {...props}>{children}</h3>,
+    p: ({ children, ...props }: ComponentProps) => <p {...props}>{children}</p>,
+    img: ({ ...props }: React.ImgHTMLAttributes<HTMLImageElement>) => <img {...props} />,
+    a: ({ children, ...props }: React.AnchorHTMLAttributes<HTMLAnchorElement>) => <a {...props}>{children}</a>,
+    li: ({ children, ...props }: ComponentProps) => <li {...props}>{children}</li>,
   },
-  AnimatePresence: ({ children }: any) => <>{children}</>,
+  AnimatePresence: ({ children }: { children: React.ReactNode }) => <>{children}</>,
 }));
 
 describe("Contact component", () => {
