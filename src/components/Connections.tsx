@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedinIn, FaTwitter, FaDev } from "react-icons/fa";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 const socialLinks = [
   {
@@ -12,16 +12,6 @@ const socialLinks = [
     name: "GitHub",
     url: "https://github.com/mrkruoff",
     icon: <FaGithub />
-  },
-  {
-    name: "Twitter",
-    url: "https://twitter.com/",
-    icon: <FaTwitter />
-  },
-  {
-    name: "Dev.to",
-    url: "https://dev.to/",
-    icon: <FaDev />
   }
 ];
 

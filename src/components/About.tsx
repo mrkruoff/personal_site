@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import me from "../assets/me.jpg";
-import { FaCode, FaServer, FaMobile, FaDatabase } from "react-icons/fa";
+import { FaCode, FaServer, FaDatabase, FaCloud } from "react-icons/fa";
 
 const skills = [
-  { name: "Frontend Development", icon: <FaCode className="text-xl" />, description: "React, TypeScript, Tailwind CSS" },
-  { name: "Backend Development", icon: <FaServer className="text-xl" />, description: "Node.js, Express, RESTful APIs" },
-  { name: "Mobile Development", icon: <FaMobile className="text-xl" />, description: "React Native, iOS, Android" },
-  { name: "Database Design", icon: <FaDatabase className="text-xl" />, description: "SQL, MongoDB, Data Modeling" },
+  { name: "Frontend Development", icon: <FaCode className="text-xl" />, description: "React, Next.js, TypeScript, Angular" },
+  { name: "Backend Development", icon: <FaServer className="text-xl" />, description: "Java (Spring Boot), Python, Node.js" },
+  { name: "Database Systems", icon: <FaDatabase className="text-xl" />, description: "PostgreSQL, MongoDB, MySQL, Elasticsearch" },
+  { name: "Cloud & Infrastructure", icon: <FaCloud className="text-xl" />, description: "AWS, BigQuery, Kibana" },
 ];
 
 const About = () => {

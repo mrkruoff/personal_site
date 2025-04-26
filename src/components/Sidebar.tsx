@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaUser, FaBriefcase, FaCode, FaEnvelope } from "react-icons/fa";
+import { FaUser, FaBriefcase, FaEnvelope } from "react-icons/fa";
 
 type SidebarProps = {
   setPage: (page: string) => void;

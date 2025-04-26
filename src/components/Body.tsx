@@ -2,7 +2,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import About from "./About";
 import Experience from "./Experience";
-import Projects from "./Projects";
 import Contact from "./Contact";
 
 type BodyProps = {

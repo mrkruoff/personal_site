@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
         <Connections />
         
         <div className="text-center text-primary-300 text-sm">
-          <p>Designed & Built with <span className="text-primary-400">♥</span> by Mark Ruoff &copy; {year}</p>
+          <p>Designed & Built by Mark Ruoff &copy; {year}</p>
         </div>
         
         <div className="flex items-center gap-4">

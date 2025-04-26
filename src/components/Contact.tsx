@@ -43,7 +43,7 @@ const Contact: React.FC = () => {
       >
         <h3 className="text-2xl md:text-3xl font-semibold text-primary-300 mb-4">Get In Touch</h3>
         <p className="text-primary-100 max-w-2xl mx-auto">
-          I'm currently open to new opportunities and collaborations. Whether you have a question or just want to say hi, I'll do my best to get back to you!
+          I'm always open to discussing new opportunities, collaborations, or simply connecting. Feel free to reach out, and I'll get back to you as soon as I can!
         </p>
       </motion.div>
       
@@ -57,7 +57,7 @@ const Contact: React.FC = () => {
             transition={{ delay: 0.1 * index, duration: 0.5 }}
             whileHover={{ y: -5, boxShadow: "0 10px 30px -10px rgba(2, 132, 199, 0.2)" }}
           >
-            <div className="flex items-center mb-3">
+            <div className="flex items-center mb-3">ß
               <div className="w-12 h-12 rounded-full bg-dark-700 flex items-center justify-center text-primary-400 mr-4">
                 {item.icon}
               </div>
@@ -82,23 +82,6 @@ const Contact: React.FC = () => {
         ))}
       </div>
 
-      <motion.div 
-        className="mt-16 text-center"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.6, duration: 0.5 }}
-      >
-        <p className="text-primary-300 mb-6">Prefer sending an email directly?</p>
-        <motion.a 
-          href="mailto:ruoff.mark@gmail.com" 
-          className="inline-flex items-center px-6 py-3 bg-primary-600 hover:bg-primary-700 rounded-lg text-white font-medium transition-colors duration-300 shadow-lg hover:shadow-xl"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <FaEnvelope className="mr-2" />
-          Email Me
-        </motion.a>
-      </motion.div>
     </div>
   );
 };

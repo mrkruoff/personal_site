@@ -15,6 +15,12 @@ const MockAbout = () => (
       <div>
         <h4>Backend Development</h4>
       </div>
+      <div>
+        <h4>Database Systems</h4>
+      </div>
+      <div>
+        <h4>Cloud & Infrastructure</h4>
+      </div>
     </div>
     <img src="/src/assets/me.jpg" alt="Mark Ruoff" />
     <a href="mailto:ruoff.mark@gmail.com">Email Me</a>
@@ -44,6 +50,8 @@ describe("About component", () => {
     expect(screen.getByText("My Skills")).toBeInTheDocument();
     expect(screen.getByText("Frontend Development")).toBeInTheDocument();
     expect(screen.getByText("Backend Development")).toBeInTheDocument();
+    expect(screen.getByText("Database Systems")).toBeInTheDocument();
+    expect(screen.getByText("Cloud & Infrastructure")).toBeInTheDocument();
   });
 
   it("displays the correct image", () => {

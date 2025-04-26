@@ -24,3 +24,7 @@ dist-ssr
 *.sw?
 
 build
+
+resume.md
+
+CLAUDE.md
