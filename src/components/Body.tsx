@@ -19,7 +19,6 @@ function Body({ page }: BodyProps) {
     switch (page) {
       case "About": return "About Me";
       case "Experience": return "My Experience";
-      case "Projects": return "My Projects";
       case "Contact": return "Get In Touch";
       default: return "About Me";
     }
@@ -29,7 +28,6 @@ function Body({ page }: BodyProps) {
     switch (page) {
       case "About": return <About />;
       case "Experience": return <Experience />;
-      case "Projects": return <Projects />;
       case "Contact": return <Contact />;
       default: return <About />;
     }

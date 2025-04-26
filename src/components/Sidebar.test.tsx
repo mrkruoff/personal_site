@@ -26,7 +26,6 @@ describe("Sidebar component", () => {
     // Check if all navigation items are rendered
     expect(screen.getByText("About")).toBeInTheDocument();
     expect(screen.getByText("Experience")).toBeInTheDocument();
-    expect(screen.getByText("Projects")).toBeInTheDocument();
     expect(screen.getByText("Contact")).toBeInTheDocument();
   });
 
@@ -44,10 +43,6 @@ describe("Sidebar component", () => {
     fireEvent.click(experienceLink);
     expect(setPageMock).toHaveBeenCalledWith("Experience");
     
-    // Simulate a click on the Projects link
-    const projectsLink = screen.getByText("Projects");
-    fireEvent.click(projectsLink);
-    expect(setPageMock).toHaveBeenCalledWith("Projects");
     
     // Simulate a click on the Contact link
     const contactLink = screen.getByText("Contact");

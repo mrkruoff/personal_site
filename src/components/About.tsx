@@ -48,10 +48,6 @@ const About = () => {
           <p className="text-lg leading-relaxed text-primary-100">
             My experience ranges from working directly with packet-level protocols to crafting seamless e-commerce experiences. I bring a deep understanding of technology across all layers to deliver reliable, user-focused solutions that solve real-world problems.
           </p>
-          
-          <p className="text-lg leading-relaxed text-primary-100">
-            When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or enjoying the outdoors. I'm always open to discussing new projects and opportunities.
-          </p>
         </motion.div>
         
         <motion.div variants={itemVariants} className="mt-8">

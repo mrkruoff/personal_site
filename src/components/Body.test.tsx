@@ -57,14 +57,6 @@ describe("Body component", () => {
     expect(screen.getByTestId("experience-component")).toBeInTheDocument();
   });
 
-  it("renders Projects component when page prop is 'Projects'", () => {
-    render(<Body page="Projects" />);
-    expect(screen.getByTestId("body")).toBeInTheDocument();
-    expect(screen.getByTestId("header")).toBeInTheDocument();
-    expect(screen.getByText("My Projects")).toBeInTheDocument();
-    expect(screen.getByTestId("projects-component")).toBeInTheDocument();
-  });
-
   it("renders Contact component when page prop is 'Contact'", () => {
     render(<Body page="Contact" />);
     expect(screen.getByTestId("body")).toBeInTheDocument();

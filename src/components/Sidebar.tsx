@@ -15,7 +15,6 @@ type NavigationItem = {
 const navigation: NavigationItem[] = [
   { name: "About", icon: <FaUser className="text-lg" /> },
   { name: "Experience", icon: <FaBriefcase className="text-lg" /> },
-  { name: "Projects", icon: <FaCode className="text-lg" /> },
   { name: "Contact", icon: <FaEnvelope className="text-lg" /> },
 ];
 
