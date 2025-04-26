@@ -62,4 +62,36 @@ describe("ExperienceCard", () => {
     expect(location).toBeInTheDocument();
     expect(location).toHaveTextContent(mockProps.location);
   });
+
+  it("renders skills correctly when provided", () => {
+    const mockProps = {
+      company: "Tech Corp",
+      position: "Software Engineer",
+      duration: "Jan 2020 - Dec 2022",
+      location: "Remote",
+      skills: ["React", "TypeScript", "Node.js"],
+    };
+
+    render(<ExperienceCard {...mockProps} />);
+
+    const skillTags = screen.getAllByTestId("skill-tag");
+    expect(skillTags.length).toBe(3);
+    expect(skillTags[0]).toHaveTextContent("React");
+    expect(skillTags[1]).toHaveTextContent("TypeScript");
+    expect(skillTags[2]).toHaveTextContent("Node.js");
+  });
+
+  it("does not render skills section when skills are not provided", () => {
+    const mockProps = {
+      company: "Tech Corp",
+      position: "Software Engineer",
+      duration: "Jan 2020 - Dec 2022",
+      location: "Remote",
+    };
+
+    render(<ExperienceCard {...mockProps} />);
+
+    const skillTags = screen.queryAllByTestId("skill-tag");
+    expect(skillTags.length).toBe(0);
+  });
 });

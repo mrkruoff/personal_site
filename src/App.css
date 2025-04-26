@@ -2,48 +2,76 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
-  height: 100%;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-dark-900 text-primary-50 font-sans;
+    height: 100%;
+  }
+  
+  #root {
+    height: 100%;
+    width: 100%;
+  }
+  
+  ::selection {
+    @apply bg-primary-600/30 text-primary-50;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-medium tracking-tight;
+  }
+  
+  a {
+    @apply transition-colors duration-200;
+  }
+  
+  button {
+    @apply transition-all duration-200;
+  }
 }
 
-#root {
-  height: 100%;
-  width: 100%;
-  background-color: black;
+/* Custom animations */
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 4s ease infinite;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.animate-glow {
+  animation: glow 1.5s ease-in-out infinite alternate;
 }
 
-@keyframes logo-spin {
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes glow {
   from {
-    transform: rotate(0deg);
+    box-shadow: 0 0 10px -10px rgba(14, 165, 233, 0.8);
   }
   to {
-    transform: rotate(360deg);
+    box-shadow: 0 0 20px -5px rgba(14, 165, 233, 0.8);
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
 }
 
-.card {
-  padding: 2em;
+::-webkit-scrollbar-track {
+  @apply bg-dark-800;
 }
 
-.read-the-docs {
-  color: #888;
+::-webkit-scrollbar-thumb {
+  @apply bg-dark-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary-800;
 }

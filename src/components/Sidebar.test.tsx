@@ -2,9 +2,18 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, it, expect, vi } from "vitest";
 import Sidebar from "./Sidebar";
 
+// Mock the icons
+vi.mock("react-icons/fa", () => ({
+  FaUser: () => <span>UserIcon</span>,
+  FaBriefcase: () => <span>BriefcaseIcon</span>,
+  FaCode: () => <span>CodeIcon</span>,
+  FaEnvelope: () => <span>EnvelopeIcon</span>,
+}));
+
 describe("Sidebar component", () => {
   it("renders sidebar with correct content", () => {
-    render(<Sidebar />);
+    const setPageMock = vi.fn();
+    render(<Sidebar setPage={setPageMock} />);
 
     // Check if the sidebar is rendered
     const sidebarElement = screen.getByTestId("sidebar");
@@ -14,13 +23,10 @@ describe("Sidebar component", () => {
     const nameElement = screen.getByText("Mark Ruoff");
     expect(nameElement).toBeInTheDocument();
 
-    // Check if the About link is rendered
-    const aboutLink = screen.getByText("About");
-    expect(aboutLink).toBeInTheDocument();
-
-    // Check if the Experience link is rendered
-    const experienceLink = screen.getByText("Experience");
-    expect(experienceLink).toBeInTheDocument();
+    // Check if all navigation items are rendered
+    expect(screen.getByText("About")).toBeInTheDocument();
+    expect(screen.getByText("Experience")).toBeInTheDocument();
+    expect(screen.getByText("Contact")).toBeInTheDocument();
   });
 
   it("calls setPage function with correct value when link is clicked", () => {
@@ -30,15 +36,31 @@ describe("Sidebar component", () => {
     // Simulate a click on the About link
     const aboutLink = screen.getByText("About");
     fireEvent.click(aboutLink);
-
-    // Check if the setPage function is called with the correct value
     expect(setPageMock).toHaveBeenCalledWith("About");
 
     // Simulate a click on the Experience link
     const experienceLink = screen.getByText("Experience");
     fireEvent.click(experienceLink);
-
-    // Check if the setPage function is called with the correct value
     expect(setPageMock).toHaveBeenCalledWith("Experience");
+    
+    
+    // Simulate a click on the Contact link
+    const contactLink = screen.getByText("Contact");
+    fireEvent.click(contactLink);
+    expect(setPageMock).toHaveBeenCalledWith("Contact");
+  });
+  
+  it("calls onNavClick callback when provided and link is clicked", () => {
+    const setPageMock = vi.fn();
+    const onNavClickMock = vi.fn();
+    render(<Sidebar setPage={setPageMock} onNavClick={onNavClickMock} />);
+
+    // Simulate a click on the About link
+    const aboutLink = screen.getByText("About");
+    fireEvent.click(aboutLink);
+    
+    // Check if both callbacks were called
+    expect(setPageMock).toHaveBeenCalledWith("About");
+    expect(onNavClickMock).toHaveBeenCalled();
   });
 });
