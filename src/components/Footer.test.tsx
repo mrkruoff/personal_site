@@ -46,7 +46,7 @@ describe("Footer component", () => {
   
   it("contains a back to top link", () => {
     render(<Footer />);
-    const topLink = screen.getByRole("link", { name: "" }); // Empty name because it's an SVG
+    const topLink = screen.getByRole("link", { name: "Scroll to top" }); 
     expect(topLink).toBeInTheDocument();
     expect(topLink).toHaveAttribute("href", "#top");
   });
