@@ -13,7 +13,7 @@ const WorkExperience: React.FC = () => {
       <ExperienceCard
         company="Point.me"
         position="Senior Software Engineer"
-        duration="July 2024 - Present"
+        duration="July 2024 - July 2025"
         location="Remote"
         skills={["Next.js", "React", "Spring Boot"]}
       />
@@ -33,7 +33,7 @@ const WorkExperience: React.FC = () => {
       />
       <ExperienceCard
         company="Opanga Networks"
-        position="Software Engineer II"
+        position="Software Engineer"
         duration="September 2018 - October 2021"
         location="Seattle, WA"
         skills={["C", "Spring Boot", "React", "Python", "Elasticsearch", "Kibana"]}

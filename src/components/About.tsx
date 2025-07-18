@@ -7,7 +7,7 @@ const skills = [
   { name: "Frontend Development", icon: <FaCode className="text-xl" />, description: "React, Next.js, TypeScript, Angular" },
   { name: "Backend Development", icon: <FaServer className="text-xl" />, description: "Java (Spring Boot), Python, Node.js" },
   { name: "Database Systems", icon: <FaDatabase className="text-xl" />, description: "PostgreSQL, MongoDB, MySQL, Elasticsearch" },
-  { name: "Cloud & Infrastructure", icon: <FaCloud className="text-xl" />, description: "AWS, BigQuery, Kibana" },
+  { name: "Cloud & Infrastructure", icon: <FaCloud className="text-xl" />, description: "AWS (EC2, S3, Lambda), Docker, Kubernetes" },
 ];
 
 const About = () => {
