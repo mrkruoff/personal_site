@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 import { FaEnvelope, FaMapMarkerAlt, FaLinkedin, FaGithub } from "react-icons/fa";
 
 // Using Record<never, never> to satisfy ESLint's no-empty-object-type rule
@@ -36,27 +35,21 @@ const Contact: React.FC = () => {
 
   return (
     <div data-testid="contact-component" className="max-w-4xl mx-auto pb-16">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+      <div
+
         className="text-center mb-12"
       >
         <h3 className="text-2xl md:text-3xl font-semibold text-primary-300 mb-4">Get In Touch</h3>
         <p className="text-primary-100 max-w-2xl mx-auto">
           I'm always open to discussing new opportunities, collaborations, or simply connecting. Feel free to reach out, and I'll get back to you as soon as I can!
         </p>
-      </motion.div>
+      </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {contactInfo.map((item, index) => (
-          <motion.div 
+          <div
             key={index}
             className="bg-dark-800 rounded-lg border border-dark-600 p-6 hover:border-primary-500 transition-all duration-300"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 * index, duration: 0.5 }}
-            whileHover={{ y: -5, boxShadow: "0 10px 30px -10px rgba(2, 132, 199, 0.2)" }}
           >
             <div className="flex items-center mb-3">
               <div className="w-12 h-12 rounded-full bg-dark-700 flex items-center justify-center text-primary-400 mr-4">
@@ -79,7 +72,7 @@ const Contact: React.FC = () => {
               </div>
             </div>
             <p className="text-primary-300 text-sm pl-16">{item.description}</p>
-          </motion.div>
+          </div>
         ))}
       </div>
 
