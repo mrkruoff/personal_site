@@ -5,7 +5,7 @@ import { describe, it, expect, vi } from "vitest";
 const MockAbout = () => (
   <div data-testid="about-component">
     <p>
-      Hello! I'm <span>Mark Ruoff</span>, a passionate software developer specializing in full-stack development based in Seattle, WA.
+      Hello! I'm <span>Mark Ruoff</span>, a passionate software developer specializing in full-stack development based in Arlington, VA.
     </p>
     <h3>My Skills</h3>
     <div>
@@ -42,7 +42,7 @@ describe("About component", () => {
   it("displays the correct text content", () => {
     render(<MockAbout />);
     expect(screen.getByText(/Mark Ruoff/)).toBeInTheDocument();
-    expect(screen.getByText(/Seattle, WA/)).toBeInTheDocument();
+    expect(screen.getByText(/Arlington, VA/)).toBeInTheDocument();
   });
 
   it("contains the skills section", () => {
