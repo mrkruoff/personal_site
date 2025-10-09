@@ -11,6 +11,13 @@ const WorkExperience: React.FC = () => {
         <strong>Work Experience</strong>
       </h1>
       <ExperienceCard
+        company="Capital One"
+        position="Lead Software Engineer"
+        duration="August 2025 - Present"
+        location="DC Metro"
+        skills={["Java", "AWS"]}
+      />
+      <ExperienceCard
         company="Point.me"
         position="Senior Software Engineer"
         duration="July 2024 - July 2025"
