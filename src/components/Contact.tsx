@@ -28,7 +28,7 @@ const Contact: React.FC = () => {
     {
       icon: <FaMapMarkerAlt className="text-xl" />,
       label: "Location",
-      value: "Seattle, WA",
+      value: "Arlington, VA",
       description: "Where I'm currently based"
     },
   ];

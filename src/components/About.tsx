@@ -42,7 +42,7 @@ const About = () => {
       >
         <motion.div variants={itemVariants} className="prose prose-invert max-w-none">
           <p className="text-lg leading-relaxed text-primary-100">
-            Hello! I'm <span className="font-semibold text-primary-300">Mark Ruoff</span>, a passionate software developer specializing in full-stack development based in Seattle, WA. With a Bachelor's Degree in Computer Science from Oregon State University, I've built a career spanning from low-level telecommunications systems to modern web applications.
+            Hello! I'm <span className="font-semibold text-primary-300">Mark Ruoff</span>, a passionate software developer specializing in full-stack development based in Arlington, VA. With a Bachelor's Degree in Computer Science from Oregon State University, I've built a career spanning from low-level telecommunications systems to modern web applications.
           </p>
           
           <p className="text-lg leading-relaxed text-primary-100">
