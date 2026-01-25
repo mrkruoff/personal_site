@@ -29,6 +29,11 @@ vi.mock("./Connections", () => ({
   default: () => <div data-testid="connections-component">Mocked Connections</div>
 }));
 
+// Mock react-icons
+vi.mock("react-icons/fa", () => ({
+  FaArrowUp: () => <span>ArrowUp</span>,
+}));
+
 describe("Footer component", () => {
   it("renders the Connections component", () => {
     render(<Footer />);
@@ -39,15 +44,16 @@ describe("Footer component", () => {
   it("displays the current year", () => {
     render(<Footer />);
     const currentYear = new Date().getFullYear();
-    // Update the expected text to match the new format
+    // Check for copyright text with current year
     expect(screen.getByText(/Mark Ruoff/)).toBeInTheDocument();
     expect(screen.getByText(RegExp(currentYear.toString()))).toBeInTheDocument();
   });
-  
+
   it("contains a back to top link", () => {
     render(<Footer />);
-    const topLink = screen.getByRole("link", { name: "Scroll to top" }); 
+    // Updated aria-label and href to match new implementation
+    const topLink = screen.getByRole("link", { name: "Scroll back to top" });
     expect(topLink).toBeInTheDocument();
-    expect(topLink).toHaveAttribute("href", "#top");
+    expect(topLink).toHaveAttribute("href", "#main-content");
   });
 });

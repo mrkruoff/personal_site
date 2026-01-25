@@ -1,6 +1,19 @@
 import { render, screen } from "@testing-library/react";
-import { describe, it, expect } from "vitest";
+import { describe, it, expect, vi } from "vitest";
 import Education from "./Education";
+
+// Define a type for component props
+type ComponentProps = React.HTMLAttributes<HTMLElement> & {
+  children?: React.ReactNode;
+};
+
+// Mock Framer Motion
+vi.mock("framer-motion", () => ({
+  motion: {
+    div: (props: ComponentProps) => <div {...props} />,
+    article: (props: ComponentProps) => <article {...props} />,
+  },
+}));
 
 describe("Education component", () => {
   it("renders the correct university name", () => {
@@ -11,9 +24,8 @@ describe("Education component", () => {
 
   it("renders the correct degree", () => {
     render(<Education />);
-    const degree = screen.getByText(
-      "Bacherlor's of Science in Computer Science",
-    );
+    // Fixed typo: "Bacherlor's" -> "Bachelor's"
+    const degree = screen.getByText("Bachelor's of Science in Computer Science");
     expect(degree).toBeInTheDocument();
   });
 

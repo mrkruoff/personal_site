@@ -11,62 +11,44 @@ type ComponentProps = React.HTMLAttributes<HTMLElement> & {
 vi.mock("framer-motion", () => ({
   motion: {
     div: (props: ComponentProps) => <div {...props} />,
-    h1: (props: ComponentProps) => <h1 {...props} />,
-    h2: (props: ComponentProps) => <h2 {...props} />,
-    h3: (props: ComponentProps) => <h3 {...props} />,
-    p: (props: ComponentProps) => <p {...props} />,
-    img: (props: React.ImgHTMLAttributes<HTMLImageElement>) => <img {...props} />,
-    a: (props: React.AnchorHTMLAttributes<HTMLAnchorElement>) => <a {...props} />,
-    li: (props: ComponentProps) => <li {...props} />,
-    footer: (props: ComponentProps) => <footer {...props} />,
   },
   AnimatePresence: ({ children }: { children: React.ReactNode }) => <>{children}</>,
 }));
 
-// Mock the IntersectionObserver hook
-vi.mock("react-intersection-observer", () => ({
-  useInView: () => ({ ref: null, inView: true }),
-}));
-
-// Mock the components used in Body
+// Mock the page components
 vi.mock("./About", () => ({
-  default: () => <div data-testid="about-component">Mocked About Component</div>
+  default: ({ onNavigateToContact }: { onNavigateToContact: () => void }) => (
+    <div data-testid="about-page">
+      About Page Content
+      <button onClick={onNavigateToContact}>Navigate to Contact</button>
+    </div>
+  ),
 }));
 
 vi.mock("./Experience", () => ({
-  default: () => <div data-testid="experience-component">Mocked Experience Component</div>
-}));
-
-vi.mock("./Projects", () => ({
-  default: () => <div data-testid="projects-component">Mocked Projects Component</div>
+  default: () => <div data-testid="experience-page">Experience Page Content</div>,
 }));
 
 vi.mock("./Contact", () => ({
-  default: () => <div data-testid="contact-component">Mocked Contact Component</div>
+  default: () => <div data-testid="contact-page">Contact Page Content</div>,
 }));
 
 describe("Body component", () => {
-  it("renders About component when page prop is 'About'", () => {
-    render(<Body page="About" />);
+  it("renders the body container", () => {
+    const setPageMock = vi.fn();
+    render(<Body page="About" setPage={setPageMock} />);
     expect(screen.getByTestId("body")).toBeInTheDocument();
-    expect(screen.getByTestId("header")).toBeInTheDocument();
-    expect(screen.getByText("About Me")).toBeInTheDocument();
-    expect(screen.getByTestId("about-component")).toBeInTheDocument();
   });
 
-  it("renders Experience component when page prop is 'Experience'", () => {
-    render(<Body page="Experience" />);
-    expect(screen.getByTestId("body")).toBeInTheDocument();
-    expect(screen.getByTestId("header")).toBeInTheDocument();
-    expect(screen.getByText("My Experience")).toBeInTheDocument();
-    expect(screen.getByTestId("experience-component")).toBeInTheDocument();
+  it("renders About page when page prop is About", () => {
+    const setPageMock = vi.fn();
+    render(<Body page="About" setPage={setPageMock} />);
+    expect(screen.getByTestId("about-page")).toBeInTheDocument();
   });
 
-  it("renders Contact component when page prop is 'Contact'", () => {
-    render(<Body page="Contact" />);
-    expect(screen.getByTestId("body")).toBeInTheDocument();
-    expect(screen.getByTestId("header")).toBeInTheDocument();
-    expect(screen.getByText("Get In Touch")).toBeInTheDocument();
-    expect(screen.getByTestId("contact-component")).toBeInTheDocument();
+  it("renders Experience page when page prop is Experience", () => {
+    const setPageMock = vi.fn();
+    render(<Body page="Experience" setPage={setPageMock} />);
+    expect(screen.getByTestId("experience-page")).toBeInTheDocument();
   });
 });

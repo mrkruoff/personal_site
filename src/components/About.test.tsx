@@ -1,77 +1,58 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, it, expect, vi } from "vitest";
+import About from "./About";
 
-// Create a mock component for testing
-const MockAbout = () => (
-  <div data-testid="about-component">
-    <p>
-      Hello! I'm <span>Mark Ruoff</span>, a passionate software developer specializing in full-stack development based in Arlington, VA.
-    </p>
-    <h3>My Skills</h3>
-    <div>
-      <div>
-        <h4>Frontend Development</h4>
-      </div>
-      <div>
-        <h4>Backend Development</h4>
-      </div>
-      <div>
-        <h4>Database Systems</h4>
-      </div>
-      <div>
-        <h4>Cloud & Infrastructure</h4>
-      </div>
-    </div>
-    <img src="/src/assets/me.jpg" alt="Mark Ruoff" />
-    <a href="mailto:ruoff.mark@gmail.com">Email Me</a>
-    <a href="https://github.com/mrkruoff/personal_site">View Source</a>
-  </div>
-);
+// Mock the image import
+vi.mock("../assets/me.jpg", () => ({
+  default: "test-image.jpg",
+}));
 
-// Mock the actual component
-vi.mock("./About", () => ({
-  default: () => <MockAbout />
+// Mock react-icons
+vi.mock("react-icons/fa", () => ({
+  FaCode: () => <span data-testid="code-icon">CodeIcon</span>,
+  FaServer: () => <span data-testid="server-icon">ServerIcon</span>,
+  FaDatabase: () => <span data-testid="database-icon">DatabaseIcon</span>,
+  FaCloud: () => <span data-testid="cloud-icon">CloudIcon</span>,
+  FaArrowRight: () => <span>ArrowIcon</span>,
 }));
 
 describe("About component", () => {
-  it("renders the About component correctly", () => {
-    render(<MockAbout />);
-    expect(screen.getByTestId("about-component")).toBeInTheDocument();
+  it("renders the about component", () => {
+    const mockNavigate = vi.fn();
+    render(<About onNavigateToContact={mockNavigate} />);
+    const aboutElement = screen.getByTestId("about-component");
+    expect(aboutElement).toBeInTheDocument();
   });
 
-  it("displays the correct text content", () => {
-    render(<MockAbout />);
-    expect(screen.getByText(/Mark Ruoff/)).toBeInTheDocument();
-    expect(screen.getByText(/Arlington, VA/)).toBeInTheDocument();
+  it("renders the hero heading", () => {
+    const mockNavigate = vi.fn();
+    render(<About onNavigateToContact={mockNavigate} />);
+    expect(screen.getByText("Full-Stack")).toBeInTheDocument();
+    expect(screen.getByText("Developer")).toBeInTheDocument();
   });
 
-  it("contains the skills section", () => {
-    render(<MockAbout />);
-    expect(screen.getByText("My Skills")).toBeInTheDocument();
-    expect(screen.getByText("Frontend Development")).toBeInTheDocument();
-    expect(screen.getByText("Backend Development")).toBeInTheDocument();
-    expect(screen.getByText("Database Systems")).toBeInTheDocument();
-    expect(screen.getByText("Cloud & Infrastructure")).toBeInTheDocument();
+  it("renders Get In Touch button that navigates to contact", () => {
+    const mockNavigate = vi.fn();
+    render(<About onNavigateToContact={mockNavigate} />);
+    const button = screen.getByRole("button", { name: /Get In Touch/i });
+    expect(button).toBeInTheDocument();
+    fireEvent.click(button);
+    expect(mockNavigate).toHaveBeenCalled();
   });
 
-  it("displays the correct image", () => {
-    render(<MockAbout />);
-    const image = screen.getByAltText("Mark Ruoff");
+  it("renders the profile image", () => {
+    const mockNavigate = vi.fn();
+    render(<About onNavigateToContact={mockNavigate} />);
+    const image = screen.getByAltText(/Mark Ruoff/i);
     expect(image).toBeInTheDocument();
   });
 
-  it("contains the correct links", () => {
-    render(<MockAbout />);
-    const emailLink = screen.getByRole("link", { name: /Email Me/i });
-    const githubLink = screen.getByRole("link", { name: /View Source/i });
-
-    expect(emailLink).toBeInTheDocument();
-    expect(emailLink).toHaveAttribute("href", "mailto:ruoff.mark@gmail.com");
-
-    expect(githubLink).toBeInTheDocument();
-    expect(githubLink).toHaveAttribute(
-      "href",
-      "https://github.com/mrkruoff/personal_site"
-    );
+  it("renders skill cards", () => {
+    const mockNavigate = vi.fn();
+    render(<About onNavigateToContact={mockNavigate} />);
+    expect(screen.getByText("Frontend")).toBeInTheDocument();
+    expect(screen.getByText("Backend")).toBeInTheDocument();
+    expect(screen.getByText("Database")).toBeInTheDocument();
+    expect(screen.getByText("Cloud")).toBeInTheDocument();
   });
 });
