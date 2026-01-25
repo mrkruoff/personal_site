@@ -80,7 +80,7 @@ const Contact: React.FC = () => {
           whileTap={{ scale: 0.98 }}
         >
           Send an Email
-          <FaArrowRight className="text-sm" />
+          <FaArrowRight className="text-sm" aria-hidden="true" />
         </motion.a>
       </motion.div>
 

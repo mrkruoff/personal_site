@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./App.css";
 import Footer from "./components/Footer";
@@ -7,7 +7,7 @@ import { FaUser, FaBriefcase, FaEnvelope } from "react-icons/fa";
 
 type NavigationItem = {
   name: string;
-  icon: React.ReactNode;
+  icon: ReactNode;
 };
 
 const navigation: NavigationItem[] = [
@@ -42,13 +42,16 @@ const App = () => {
         <div className="max-w-6xl mx-auto px-4 md:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo / Name */}
-            <motion.h1
-              className="text-xl md:text-2xl font-bold gradient-text cursor-pointer"
-              whileHover={{ scale: 1.02 }}
-              onClick={() => setPage("About")}
-            >
-              Mark Ruoff
-            </motion.h1>
+            <h1 className="text-xl md:text-2xl font-bold">
+              <motion.button
+                type="button"
+                className="gradient-text cursor-pointer"
+                whileHover={{ scale: 1.02 }}
+                onClick={() => handleNavClick("About")}
+              >
+                Mark Ruoff
+              </motion.button>
+            </h1>
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-1" aria-label="Main navigation">
@@ -59,8 +62,8 @@ const App = () => {
                     key={item.name}
                     onClick={() => handleNavClick(item.name)}
                     className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${isActive
-                        ? "text-mono-white bg-mono-800"
-                        : "text-mono-400 hover:text-mono-100 hover:bg-mono-900"
+                      ? "text-mono-white bg-mono-800"
+                      : "text-mono-400 hover:text-mono-100 hover:bg-mono-900"
                       }`}
                     aria-current={isActive ? "page" : undefined}
                   >
@@ -104,8 +107,8 @@ const App = () => {
                       key={item.name}
                       onClick={() => handleNavClick(item.name)}
                       className={`w-full flex items-center gap-3 px-4 py-3 text-left rounded-lg transition-all duration-200 ${isActive
-                          ? "text-mono-white bg-mono-800"
-                          : "text-mono-400 hover:text-mono-100 hover:bg-mono-900"
+                        ? "text-mono-white bg-mono-800"
+                        : "text-mono-400 hover:text-mono-100 hover:bg-mono-900"
                         }`}
                       aria-current={isActive ? "page" : undefined}
                     >

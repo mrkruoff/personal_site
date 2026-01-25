@@ -148,18 +148,7 @@
   @apply bg-mono-500;
 }
 
-/* Gradient keyframe for animated text */
-@keyframes gradientX {
-
-  0%,
-  100% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-}
+/* Note: gradientX keyframe is defined in tailwind.config.js */
 
 /* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
