@@ -13,24 +13,24 @@ vi.mock("react-icons/fa", () => ({
 describe("Connections component", () => {
   it("renders the connections component with correct social links", () => {
     render(<Connections />);
-    
+
     // Check if component is rendered
     expect(screen.getByTestId("connections-component")).toBeInTheDocument();
-    
-    // Check for LinkedIn link
-    const linkedInLink = screen.getByRole("link", { name: "LinkedIn" });
+
+    // Check for LinkedIn link (updated aria-label includes "(opens in new tab)")
+    const linkedInLink = screen.getByRole("link", { name: /LinkedIn/i });
     expect(linkedInLink).toBeInTheDocument();
     expect(linkedInLink).toHaveAttribute("href", "https://www.linkedin.com/in/mark-ruoff-63624044/");
-    
-    // Check for GitHub link
-    const gitHubLink = screen.getByRole("link", { name: "GitHub" });
+
+    // Check for GitHub link (updated aria-label includes "(opens in new tab)")
+    const gitHubLink = screen.getByRole("link", { name: /GitHub/i });
     expect(gitHubLink).toBeInTheDocument();
     expect(gitHubLink).toHaveAttribute("href", "https://github.com/mrkruoff");
   });
-  
+
   it("has the correct attributes for accessibility", () => {
     render(<Connections />);
-    
+
     // Check all links have target="_blank" and rel="noopener noreferrer"
     const allLinks = screen.getAllByRole("link");
     allLinks.forEach(link => {

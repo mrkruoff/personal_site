@@ -6,72 +6,170 @@
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
-    @apply bg-dark-900 text-primary-50 font-sans;
+    @apply bg-mono-black text-mono-100 font-sans;
     height: 100%;
   }
-  
+
   #root {
     height: 100%;
     width: 100%;
   }
-  
+
   ::selection {
-    @apply bg-primary-600/30 text-primary-50;
+    background: rgba(236, 72, 153, 0.3);
+    @apply text-mono-white;
   }
-  
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-medium tracking-tight;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-medium tracking-tight text-mono-white;
   }
-  
+
   a {
     @apply transition-colors duration-200;
   }
-  
+
   button {
     @apply transition-all duration-200;
   }
-}
 
-/* Custom animations */
-.animate-gradient {
-  background-size: 200% 200%;
-  animation: gradient-shift 4s ease infinite;
-}
-
-.animate-glow {
-  animation: glow 1.5s ease-in-out infinite alternate;
-}
-
-@keyframes gradient-shift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-@keyframes glow {
-  from {
-    box-shadow: 0 0 10px -10px rgba(14, 165, 233, 0.8);
-  }
-  to {
-    box-shadow: 0 0 20px -5px rgba(14, 165, 233, 0.8);
+  /* Focus visible for accessibility */
+  :focus-visible {
+    outline: 2px solid #EC4899;
+    outline-offset: 2px;
   }
 }
 
-/* Custom scrollbar */
+@layer components {
+
+  /* Gradient text - the signature accent */
+  .gradient-text {
+    background: linear-gradient(135deg, #EC4899, #F43F5E, #F97316);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-text-animated {
+    background: linear-gradient(135deg, #EC4899, #F43F5E, #F97316, #EC4899);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientX 3s ease infinite;
+  }
+
+  /* Gradient border effect */
+  .gradient-border {
+    position: relative;
+    background: #0a0a0a;
+  }
+
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, #EC4899, #F43F5E, #F97316);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .gradient-border:hover::before {
+    opacity: 1;
+  }
+
+  /* Mono card - clean white border */
+  .mono-card {
+    @apply bg-dark-900 border border-mono-800 rounded-lg;
+  }
+
+  .mono-card:hover {
+    @apply border-mono-600;
+  }
+
+  /* Gradient button */
+  .btn-gradient {
+    background: linear-gradient(135deg, #EC4899, #F43F5E, #F97316);
+    @apply text-mono-white font-medium px-5 py-2.5 rounded-lg;
+    transition: all 0.3s ease;
+  }
+
+  .btn-gradient:hover {
+    background: linear-gradient(135deg, #F472B6, #FB7185, #FB923C);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px -10px rgba(236, 72, 153, 0.4);
+  }
+
+  /* Outline button - mono style */
+  .btn-outline {
+    @apply bg-transparent border border-mono-700 text-mono-100 font-medium px-5 py-2.5 rounded-lg;
+    transition: all 0.3s ease;
+  }
+
+  .btn-outline:hover {
+    @apply border-mono-400 text-mono-white;
+  }
+
+  /* Skip link for accessibility */
+  .skip-link {
+    @apply sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50;
+    background: linear-gradient(135deg, #EC4899, #F97316);
+    @apply text-white px-4 py-2 rounded-md font-medium;
+  }
+}
+
+/* Custom scrollbar - mono style */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-dark-800;
+  @apply bg-mono-950;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-dark-600 rounded-full;
+  @apply bg-mono-700 rounded-full;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-primary-800;
+  @apply bg-mono-500;
+}
+
+/* Gradient keyframe for animated text */
+@keyframes gradientX {
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
