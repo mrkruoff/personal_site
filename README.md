@@ -8,7 +8,7 @@ This is my personal site, built with React, Vite, and TypeScript. You can view t
 - Deployed seamlessly using **Netlify** for fast and reliable hosting.
 
 ## Upgrade Notes
-Previously built with Create React App (CRA) and Javascript, this site has been upgraded to use Vite f along with now using TypeScript.
+Previously built with Create React App (CRA) and Javascript, this site has been upgraded to use Vite along with now using TypeScript.
 
 ## Installation and Setup
 To run this project locally:
